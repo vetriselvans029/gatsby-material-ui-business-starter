@@ -45,7 +45,6 @@ const Detail = ({ classes, data }) => {
 export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      ...TinaRemark
       frontmatter {
         image {
           publicURL
