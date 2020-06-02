@@ -9,6 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { withPrefix } from "gatsby";
 import withStyles from "@material-ui/styles/withStyles";
+import { remarkForm } from 'gatsby-tinacms-remark'
 
 const styles = {
   cardMedia: {
@@ -44,6 +45,7 @@ const Detail = ({ classes, data }) => {
 export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      ...TinaRemark
       frontmatter {
         image {
           publicURL
@@ -56,4 +58,4 @@ export const query = graphql`
   }
 `;
 
-export default withRoot(withStyles(styles)(Detail));
+export default withRoot(remarkForm(withStyles(styles)(Detail)));
