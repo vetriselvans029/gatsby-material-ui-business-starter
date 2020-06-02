@@ -22,6 +22,8 @@
     "gatsby-plugin-stylus": "2.2.3",
     "gatsby-plugin-tinacms": "^0.2.0",
     "gatsby-source-filesystem": "2.2.4",
+    "gatsby-tinacms-git": "^0.5.1",
+    "gatsby-tinacms-remark": "^0.8.0",
     "gatsby-transformer-remark": "2.7.3",
     "gh-pages": "2.2.0",
     "jss": "10.1.1",
